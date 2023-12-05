@@ -2,6 +2,7 @@
 
 [ -z "$1" ] && exit 1
 rm file*
+git rm file*
 echo asd>file$1
 git add *
 git commit -m "$1"
