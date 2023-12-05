@@ -9,4 +9,4 @@ git commit -m "$1"
 git tag -d v1.0.$1
 git push origin :refs/tags/v1.0.$1
 git tag -a v1.0.$1 -m "Release version 1.0.$1"
-git push --tags
+git push origin v1.0.$1
