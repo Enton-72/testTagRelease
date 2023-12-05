@@ -1,5 +1,6 @@
 #!/bin/bash
 
+[ -z "$1" ] && exit 1
 rm file*
 echo asd>file$1
 git add *
