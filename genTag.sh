@@ -10,14 +10,15 @@ git tag -d v1.0.$1
 git push origin :refs/tags/v1.0.$1
 git tag -a v1.0.$1 -m "Release version 1.0.$1"
 git push origin v1.0.$1
-git push
+
 
 exit 0
 
 git add/rm 					-> Brise ili dodaje novi file negde?
 git commit -m "asd" 				-> Svaki commit predstavlja skup lokalnih izmena. 
 git tag -d v1.0.$1 				-> brise tag lokalno. ili "git tag -d $(git tag)" brise sve tagove
-git push origin :refs/tags/v1.0.$1 		-> brise tag remote
+git push origin :refs/tags/v1.0.$1 		-> brise tag na remote
+git push --delete origin v1.0.6			-> takodje brise tag na remote-u
 git tag -a v1.0.$1 -m "Release version 1.0.$1" 	-> dodaje tag lokalno
 git push origin v1.0.$1 			-> pusuje taj tag na remote. Ali sad taj tag ne pripada nijednom branch-u?
 git push 					-> salje sve pomene na remote
