@@ -5,7 +5,7 @@ rm file*
 git rm file*
 echo "asd$1">file$1
 git add *
-git commit -m "$1"
+git commit -m "message for tag $1"
 git tag -d v1.0.$1
 git push origin :refs/tags/v1.0.$1
 git tag -a v1.0.$1 -m "Release version 1.0.$1"
